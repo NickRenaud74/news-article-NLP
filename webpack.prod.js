@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-    entry: './src/client/index.js',
+    entry: ["@babel/polyfill", './src/client/index.js'],
     mode: 'production',
     devtool: 'source-map',
     optimization: {

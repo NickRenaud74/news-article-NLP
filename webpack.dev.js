@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    entry: './src/client/index.js',
+    entry: ["@babel/polyfill", './src/client/index.js'],
     mode: 'development',
     devtool: 'source-map',
     output: {
