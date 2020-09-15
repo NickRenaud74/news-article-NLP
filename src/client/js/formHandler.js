@@ -17,7 +17,7 @@ const postData = async(url = '', data = {}) => {
     };
 };
 
-//Get Polarity score from API and return polarity statement
+//Get Polarity score from API and return statement
 const getPolarity = score => {
     let pol;
     switch (score) {
@@ -66,7 +66,7 @@ const handleSubmit = event => {
     // check what text was put into the form field
     let formText = document.getElementById('text').value
 
-    Client.validateForm(formText)
+    Client.validateInput(formText)
 
     console.log("::: Form Submitted :::")
     postData('/api', {

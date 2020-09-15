@@ -37,6 +37,7 @@ app.listen(8080, () => {
     console.log('NLP listening on port 8080!');
 })
 
+//GET request to Meaning Cloud API
 const getSentiment = async(req, res) => {
     const txt = req.body.userInput;
     const response = await fetch(`${baseUrl}?key=${apiKey}&of=json&txt=${txt}&lang=en`);
