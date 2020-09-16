@@ -1,7 +1,14 @@
+$primary-color: #545454;
+$primary-font: Georgia,
+'Times New Roman',
+Times,
+serif;
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: $primary-color;
+    font-family: $primary-font;
 }
 
 main {
@@ -11,4 +18,9 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+.output {
+    display: flex;
+    flex-direction: row;
 }
