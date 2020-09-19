@@ -1,3 +1,4 @@
+$text-color: #e7e7e7;
 $primary-color: #545454;
 $primary-font: Georgia,
 'Times New Roman',
@@ -23,4 +24,31 @@ section {
 .output {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.robot {
+    margin-right: 10px;
+}
+
+.results {
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    background: black;
+    max-width: 400px;
+    color: $text-color;
+    margin: 20px;
+    line-height: 2rem;
+}
+
+.results::after {
+    content: '';
+    border: 30px solid transparent;
+    border-right-color: black;
+    border-left: 0;
+    position: absolute;
+    left: -30px;
+    top: 20%;
+    margin-top: -18px;
 }

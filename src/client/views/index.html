@@ -16,7 +16,7 @@
     <header class="head">
         <div class="logo"></div>
         <div class="title">
-            <h1>Article Evaluation</h1>
+            <h1>News Article Evaluation</h1>
         </div>
         <div class="nav">
             <ul>
@@ -34,21 +34,19 @@
         <section>
             <form class="" onsubmit="return Client.handleSubmit(event)">
                 <input id="text" type="text" name="input" placeholder="Enter text to be analyzed" required>
-                <input id="submit" type="submit" name="submit" value="submit" onsubmit="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                <input id="submit" type="submit" name="submit" value="Submit" onsubmit="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
             </form>
             <section>
 
                 <section class="output">
                     <div class="robot"></div>
                     <div class="results">
-                        <strong>Results:</strong>
-                        <div id="agreement"></div>
-                        <div id="confidence"></div>
-                        <div id="irony"></div>
-                        <div id="subjective"></div>
-                        <div id="polarity"></div>
+                        <div id="agreement">Agreement: Agreement</div>
+                        <div id="confidence">Confidence: 100</div>
+                        <div id="irony">Irony: Nonironic</div>
+                        <div id="subjective">Subjectivity: Subjective</div>
+                        <div id="polarity">Polarity: Positive</div>
                     </div>
-
                 </section>
     </main>
 
