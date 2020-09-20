@@ -1,7 +1,7 @@
 import { validateInput } from "../src/client/js/validateInput";
 
 
-describe("Testing form validation function", () => {
+describe("Testing form validation function with valid input", () => {
 
     test('Should check that there is valid text as an input', () => {
         const input = 'This is a test string';

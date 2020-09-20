@@ -3,12 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Sentiment Analysis</title>
-    <link rel="stylesheet" href="/styles/resets.scss">
-    <link rel="stylesheet" href="/styles/base.scss">
-    <link rel="stylesheet" href="/styles/header.scss">
-    <link rel="stylesheet" href="/styles/form.scss">
-    <link rel="stylesheet" href="/styles/footer.scss">
+    <title>News Article Evaluation</title>
 </head>
 
 <body>
@@ -36,18 +31,19 @@
                 <input id="text" type="text" name="input" placeholder="Enter text to be analyzed" required>
                 <input id="submit" type="submit" name="submit" value="Submit" onsubmit="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
             </form>
-            <section>
+        </section>
 
-                <section class="output">
-                    <div class="robot"></div>
-                    <div class="results">
-                        <div id="agreement">Agreement: Agreement</div>
-                        <div id="confidence">Confidence: 100</div>
-                        <div id="irony">Irony: Nonironic</div>
-                        <div id="subjective">Subjectivity: Subjective</div>
-                        <div id="polarity">Polarity: Positive</div>
-                    </div>
-                </section>
+        <section class="output">
+            <div class="robot"></div>
+            <div class="results hide">
+                <div id="analysis">Analysis</div>
+                <div id="agreement"></div>
+                <div id="confidence"></div>
+                <div id="irony"></div>
+                <div id="subjective"></div>
+                <div id="polarity"></div>
+            </div>
+        </section>
     </main>
 
     <footer class="foot">

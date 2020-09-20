@@ -31,6 +31,15 @@ section {
     margin-right: 10px;
 }
 
+#analysis {
+    text-align: center;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
 .results {
     position: relative;
     border-radius: 20px;
@@ -51,4 +60,12 @@ section {
     left: -30px;
     top: 20%;
     margin-top: -18px;
+}
+
+@media(max-width: 800px) {
+    .title {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
 }

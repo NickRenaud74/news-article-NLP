@@ -40,7 +40,7 @@ app.listen(8080, () => {
 //GET request to Meaning Cloud API
 const getSentiment = async(req, res) => {
     const txt = req.body.userInput;
-    const response = await fetch(`${baseUrl}?key=${apiKey}&of=json&txt=${txt}&lang=en`);
+    const response = await fetch(`${baseUrl}?key=${apiKey}&of=json&lang=en&txt=${txt}`);
     try {
         const sentimentData = await response.json();
         console.log(sentimentData);

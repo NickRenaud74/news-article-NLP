@@ -57,24 +57,28 @@ const updateUi = data => {
     document.getElementById('irony').innerHTML = `Irony: ${formatString(data.irony)}`;
     document.getElementById('subjective').innerHTML = `Subjectivity: ${formatString(data.subjectivity)}`;
     document.getElementById('polarity').innerHTML = `Polarity: ${getPolarity(data.score_tag)}`;
+    document.querySelector('.results').classList.remove('hide');
 }
 
 // Handle form 
 const handleSubmit = event => {
     event.preventDefault()
-
-    // check what text was put into the form field
-    let formText = document.getElementById('text').value
-
-    Client.validateInput(formText)
-
+    let formText = document.getElementById('text').value;
     console.log("::: Form Submitted :::")
     postData('/api', {
             userInput: formText
         })
         .then(data => {
             updateUi(data);
-        });
+        }).catch(error => {
+            alert('Could not process request.  Please review your input and enter valid text.');
+        })
 };
 
-export { handleSubmit }
+export {
+    getPolarity,
+    formatString,
+    updateUi,
+    postData,
+    handleSubmit
+}
