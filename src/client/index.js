@@ -16,7 +16,7 @@ robotIcon.className = 'robot-icon';
 document.querySelector('.logo').appendChild(robotIcon);
 
 
-//Append Robot Icon for main sectiion
+//Append Robot Icon for main section
 const mainIcon = new Image();
 mainIcon.src = iconLarge;
 mainIcon.className = 'main-icon';

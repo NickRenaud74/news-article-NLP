@@ -54,6 +54,17 @@
     <footer class="foot">
         <p>Copyright Nick Renaud 2020</p>
     </footer>
+
+    <!--Add Service Workers to run offline content-->
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use window load event to keep the page load performance
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 </body>
 
 </html>
