@@ -1,6 +1,5 @@
 import { postData, handleSubmit } from '../src/client/js/formHandler';
 
-
 //postData Test
 describe("Testing post request function", () => {
     test("Testing post request", async() => {

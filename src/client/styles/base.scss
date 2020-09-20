@@ -1,14 +1,15 @@
 $text-color: #e7e7e7;
-$primary-color: #545454;
+$background-color: #545454;
 $primary-font: Georgia,
 'Times New Roman',
 Times,
 serif;
+//Main Body Section
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: $primary-color;
+    background-color: $background-color;
     font-family: $primary-font;
 }
 
@@ -21,6 +22,7 @@ section {
     margin: 50px auto;
 }
 
+// Robot/Output Section
 .output {
     display: flex;
     flex-direction: row;
@@ -40,6 +42,7 @@ section {
     display: none;
 }
 
+//Speech Bubble Section
 .results {
     position: relative;
     border-radius: 20px;
@@ -62,6 +65,7 @@ section {
     margin-top: -18px;
 }
 
+//Small Screens
 @media(max-width: 800px) {
     .title {
         h1 {
