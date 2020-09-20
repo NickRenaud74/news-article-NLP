@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const mockAPIResponse = require('./mockAPI.js');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fetch = require('node-fetch');
@@ -9,11 +8,13 @@ const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 dotenv.config();
 
+//MeaningCloud API credentials
 const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1';
 const apiKey = process.env.apiKey;
 
 // creating an instance of express
 const app = express()
+    //to use cross origin allowance
 app.use(cors())
     // to use json
 app.use(bodyParser.json())
@@ -28,13 +29,9 @@ app.get('/', (req, res) => {
     res.sendFile('dist/index.html')
 })
 
-app.get('/test', (req, res) => {
-    res.json(mockAPIResponse);
-})
-
 // designates what port the app will listen to for incoming requests
 app.listen(8080, () => {
-    console.log('NLP listening on port 8080!');
+    console.log('News article evaluation listening on port 8080!');
 })
 
 //GET request to Meaning Cloud API
@@ -50,4 +47,5 @@ const getSentiment = async(req, res) => {
     };
 };
 
+//handle post request
 app.post('/api', getSentiment);

@@ -1,4 +1,4 @@
-import { validateInput } from './js/validateInput'
+import { updateUi } from './js/updateUi'
 import { handleSubmit } from './js/formHandler'
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -8,7 +8,7 @@ import './styles/header.scss'
 import icon from './images/robot-icon.jpg'
 import iconLarge from './images/robot-icon-main.jpg'
 
-//Robot Icon for header
+//Append Robot Icon for header
 const robotIcon = new Image();
 robotIcon.src = icon;
 robotIcon.className = 'robot-icon';
@@ -16,7 +16,7 @@ robotIcon.className = 'robot-icon';
 document.querySelector('.logo').appendChild(robotIcon);
 
 
-//Robot Icon for main sectiion
+//Append Robot Icon for main sectiion
 const mainIcon = new Image();
 mainIcon.src = iconLarge;
 mainIcon.className = 'main-icon';
@@ -24,6 +24,6 @@ mainIcon.className = 'main-icon';
 document.querySelector('.robot').appendChild(mainIcon);
 
 export {
-    validateInput,
+    updateUi,
     handleSubmit
 }
